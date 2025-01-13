@@ -38,10 +38,16 @@ if __name__ == "__main__":
 
 
     excel_file = sys.argv[1]  # Ruta al fichero Excel
+    print(excel_file)
+    if '.csv' in excel_file or '.xlsx' in excel_file:
+        print("Ok")
+    else:
+        print("Error")
+        sys.exit(-1)
     sheet_name = sys.argv[2]  # Nombre de la hoja en el Excel
     database_name = sys.argv[3] # Nombre del archivo de base de datos SQLite
     table_name = sys.argv[4]# Nombre de la tabla donde se insertarán los datos
-    print(excel_file)
+    
     print(sheet_name)
     print(database_name)
     print(table_name)
