@@ -33,15 +33,17 @@ def excel_to_sqlite(excel_file, sheet_name, database_name, table_name):
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    for arg in sys.argv: 
-        print(arg)
 
 
 
 
-    #excel_file = ARGUMENTO1  # Ruta al fichero Excel
-    #sheet_name = HOJA         # Nombre de la hoja en el Excel
-    #database_name = BBDD  # Nombre del archivo de base de datos SQLite
-    #table_name = TABLA   # Nombre de la tabla donde se insertarán los datos
-
-    #excel_to_sqlite(excel_file, sheet_name, database_name, table_name)
+    excel_file = sys.argv[1]  # Ruta al fichero Excel
+    sheet_name = sys.argv[2]  # Nombre de la hoja en el Excel
+    database_name = sys.argv[3] # Nombre del archivo de base de datos SQLite
+    table_name = sys.argv[4]# Nombre de la tabla donde se insertarán los datos
+    print(excel_file)
+    print(sheet_name)
+    print(database_name)
+    print(table_name)
+    
+    excel_to_sqlite(excel_file, sheet_name, database_name, table_name)
